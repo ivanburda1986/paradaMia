@@ -7,6 +7,30 @@
   "description": "A readable Hacker News app.",
   "icons": [
     {
+      "src": "media/manifest-icon-192.maskable.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "media/manifest-icon-192.maskable.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "media/manifest-icon-512.maskable.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "media/manifest-icon-512.maskable.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
       "src": "images/touch/homescreen48.png",
       "sizes": "48x48",
       "type": "image/png"
@@ -29,11 +53,6 @@
     {
       "src": "images/touch/homescreen168.png",
       "sizes": "168x168",
-      "type": "image/png"
-    },
-    {
-      "src": "images/touch/homescreen192.png",
-      "sizes": "192x192",
       "type": "image/png"
     }
   ],
