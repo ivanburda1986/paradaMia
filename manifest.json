@@ -1,32 +1,32 @@
 {
   "name": "paradaMia",
   "short_name": "paradaMia",
-  "theme_color": "#RRGGBB",
+  "theme_color": "#317EFB",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#fff",
   "description": "A readable Hacker News app.",
   "icons": [
     {
-      "src": "media/manifest-icon-192.maskable.png",
+      "src": "src/media/manifest-icon-192.png",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "any"
     },
     {
-      "src": "media/manifest-icon-192.maskable.png",
+      "src": "src/media/manifest-icon-192.maskable.png",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "maskable"
     },
     {
-      "src": "media/manifest-icon-512.maskable.png",
+      "src": "src/media/manifest-icon-512.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any"
     },
     {
-      "src": "media/manifest-icon-512.maskable.png",
+      "src": "src/media/manifest-icon-512.maskable.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "maskable"
