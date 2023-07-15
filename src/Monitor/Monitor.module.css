@@ -1,9 +1,8 @@
 .stopShield{
     border: 3px solid #0c3135;
     background-color: white;
-    width: 95vw;
+    width: 90vw;
     max-width: 35rem;
-    margin: 0 auto;
     margin-bottom: 5px;
     font-size: 1.2rem;
     font-weight: 800;
@@ -12,7 +11,7 @@
 .monitor{
     border: 10px solid #0c3135;
     background-color: #2a484c;
-    width: 95vw;
+    width: 90vw;
     max-width: 35rem;
 }
 

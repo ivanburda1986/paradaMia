@@ -1,0 +1,12 @@
+1
+Display board with next departures from a hardcoded station
+Show skeleton (empty board) by default before data gets loaded - to avoid jumping
+While data is loading show the real animation (moving squares) to indicate loding
+Add an option to request update (e.g. pressing the stop shield)
+
+2
+Turn the solution into a PWA
+
+3
+Get a list of tram stops names and their IDs (from Wiener Linien)
+Allow users to search stops and add their monitors (save preference in local storage)
