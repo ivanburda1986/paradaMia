@@ -1,0 +1,18 @@
+.monitorConnection{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #5a6d7b;
+  color: #f7e18e;
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+.monitorConnection + .monitorConnection{
+  margin-top: 3px;
+}
+
+.monitor-left{
+  color: red !important;
+}

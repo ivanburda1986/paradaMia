@@ -1,0 +1,10 @@
+{
+  "contents": "{\"data\":{\"monitors\":[{\"locationStop\":{\"type\":\"Feature\",\"geometry\":{\"type\":\"Point\",\"coordinates\":[16.3808936,48.1829413]},\"properties\":{\"name\":\"60201910\",\"title\":\"Absberggasse\",\"municipality\":\"Wien\",\"municipalityId\":90001,\"type\":\"stop\",\"coordName\":\"WGS84\",\"attributes\":{\"rbl\":3431}}},\"lines\":[{\"name\":\"D\",\"towards\":\"Nußdorf, Beethovengang\",\"direction\":\"H\",\"platform\":\"1\",\"richtungsId\":\"1\",\"barrierFree\":true,\"realtimeSupported\":true,\"trafficjam\":false,\"departures\":{\"departure\":[{\"departureTime\":{\"timePlanned\":\"2023-07-15T20:51:00.000+0200\",\"timeReal\":\"2023-07-15T20:51:00.000+0200\",\"countdown\":7}},{\"departureTime\":{\"timePlanned\":\"2023-07-15T21:01:00.000+0200\",\"timeReal\":\"2023-07-15T21:01:00.000+0200\",\"countdown\":17}},{\"departureTime\":{\"timePlanned\":\"2023-07-15T21:11:00.000+0200\",\"timeReal\":\"2023-07-15T21:11:00.000+0200\",\"countdown\":27}},{\"departureTime\":{\"timePlanned\":\"2023-07-15T21:21:00.000+0200\",\"timeReal\":\"2023-07-15T21:21:00.000+0200\",\"countdown\":37}},{\"departureTime\":{\"timePlanned\":\"2023-07-15T21:31:00.000+0200\",\"timeReal\":\"2023-07-15T21:31:00.000+0200\",\"countdown\":47}},{\"departureTime\":{\"timePlanned\":\"2023-07-15T21:41:00.000+0200\",\"timeReal\":\"2023-07-15T21:41:00.000+0200\",\"countdown\":57}},{\"departureTime\":{\"timePlanned\":\"2023-07-15T21:51:00.000+0200\",\"timeReal\":\"2023-07-15T21:51:00.000+0200\",\"countdown\":67}}]},\"type\":\"ptTram\",\"lineId\":136}],\"attributes\":{}}]},\"message\":{\"value\":\"OK\",\"messageCode\":1,\"serverTime\":\"2023-07-15T20:43:27.000+0200\"}}",
+  "status": {
+    "url": "http://www.wienerlinien.at/ogd_realtime/monitor?stopId=3431",
+    "content_type": "application/json;charset=UTF-8",
+    "http_code": 200,
+    "response_time": 1966,
+    "content_length": 1469
+  }
+}

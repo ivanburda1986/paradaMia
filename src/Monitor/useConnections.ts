@@ -1,6 +1,6 @@
 import {useEffect, useState} from 'react';
 
-const GET_STOP_DATA = 'https://api.allorigins.win/get?url=http://www.wienerlinien.at/ogd_realtime/monitor?stopId='
+const GET_STOP_DATA = 'https://api.allorigins.win/get?url=http://www.wienerlinien.at/ogd_realtime/monitor?stopId=';
 
 
 interface StopMonitorFull {
@@ -84,6 +84,30 @@ interface HookResult{
 }
 
 
+function mapMonitorData(stopMonitorData: StopMonitorFull[], departureCountdownToGet:number) {
+    return stopMonitorData.map((monitorItem) => (
+        {
+            stopInfo: {
+                title: monitorItem.locationStop.properties.title
+            },
+            lines: monitorItem.lines.filter(({type}) => type === "ptTram").map(({
+                                                                                    name,
+                                                                                    towards,
+                                                                                    barrierFree,
+                                                                                    departures,
+                                                                                    trafficjam
+                                                                                }) => ({
+                name,
+                towards,
+                departures: departures.departure.map(departure => departure.departureTime.countdown),
+                barrierFree,
+                trafficJam: trafficjam,
+                nextCounter: departures.departure[departureCountdownToGet].departureTime.countdown
+            }))
+        }
+    ));
+}
+
 const getMonitors = (stopMonitorData: StopMonitorFull[]):StopMonitor =>{
     const finalData:StopMonitor = {
         stopInfo:{
@@ -91,23 +115,14 @@ const getMonitors = (stopMonitorData: StopMonitorFull[]):StopMonitor =>{
         },
         connections: []
     };
-    const monitors = stopMonitorData.map((monitorItem) => (
-        {
-            stopInfo: {
-                title: monitorItem.locationStop.properties.title},
-            lines: monitorItem.lines.filter(({type})=>type==="ptTram").map(({name, towards, barrierFree,departures, trafficjam}) => ({
-                name,
-                towards,
-                departures: departures.departure.map(departure => departure.departureTime.countdown),
-                barrierFree,
-                trafficJam: trafficjam,
-                nextCounter: departures.departure[0].departureTime.countdown
-            }))
-        }
-    ))
+    const monitors = mapMonitorData(stopMonitorData, 0)
     finalData.stopInfo.title = monitors[0].stopInfo.title;
     monitors.forEach((monitor)=>finalData.connections.push(...monitor.lines))
     finalData.connections.sort((a,b)=>a.nextCounter-b.nextCounter)
+    if(finalData.connections.length===1){
+        const {lines} = mapMonitorData(stopMonitorData, 1)[0]
+        finalData.connections.push(lines[0])
+    }
     return finalData;
 }
 
@@ -120,7 +135,8 @@ export const useConnections = (stopNumber:number):HookResult => {
      useEffect(() => {
          const fetchData = async () => {
              try {
-                 const response = await fetch(`${GET_STOP_DATA}${stopNumber}`, {
+                 // const response = await fetch(`${GET_STOP_DATA}${stopNumber}`, {
+                 const response = await fetch(`./src/data/${stopNumber}.json`,  {
                      method: 'GET',
                      headers: {
                          Accept: 'application/json',
@@ -146,4 +162,3 @@ export const useConnections = (stopNumber:number):HookResult => {
 
      return { stopMonitors, httpCode };
  };
-
