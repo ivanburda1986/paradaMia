@@ -135,8 +135,8 @@ export const useConnections = (stopNumber:number):HookResult => {
      useEffect(() => {
          const fetchData = async () => {
              try {
-                 const response = await fetch(`${GET_STOP_DATA}${stopNumber}`, {
-                 // const response = await fetch(`./src/data/${stopNumber}.json`,  {
+                 // const response = await fetch(`${GET_STOP_DATA}${stopNumber}`, {
+                 const response = await fetch(`./src/data/${stopNumber}.json`,  {
                      method: 'GET',
                      headers: {
                          Accept: 'application/json',

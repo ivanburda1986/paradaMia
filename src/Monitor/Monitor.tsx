@@ -6,9 +6,12 @@ export const Monitor: FC = () => {
     const {stopMonitors} = useConnections(3431);
 
     return (
-        <div className={`${styles.monitor}`}>
-            <section className={`${styles.headers} d-flex justify-content-between align-items-center px-1`}><p>Linie</p><p>Abfahrt in Minuten</p></section>
-            {stopMonitors?.connections.map((connection)=><MonitorConnection key={`${connection.name}-${connection.nextCounter}`} connection={connection}/>)}
+        <div>
+            <div className={`${styles.stopShield} py-1`}>Absberggasse</div>
+            <div className={`${styles.monitor}`}>
+                <section className={`${styles.headers} d-flex justify-content-between align-items-center px-1`}><p>Linie</p><p>Abfahrt in Minuten</p></section>
+                {stopMonitors?.connections.map((connection)=><MonitorConnection key={`${connection.name}-${connection.nextCounter}`} connection={connection}/>)}
+            </div>
         </div>
     );
 };
