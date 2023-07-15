@@ -1,11 +1,9 @@
 import {FC} from 'react';
-import {useConnections, useTramStops} from "./useConnections.ts";
+import {useConnections} from "./useConnections.ts";
 import {MonitorConnection} from "./MonitorConnection/MonitorConnection.tsx";
 import styles from './Monitor.module.css'
 export const Monitor: FC = () => {
-    const {stopMonitors} = useConnections(3431);
-    const {stops} = useTramStops();
-    console.log(stops);
+    const {stopMonitors} = useConnections(45);
 
     return (
         <div className={`${styles.monitor}`}>
