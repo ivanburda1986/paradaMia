@@ -1,6 +1,5 @@
 import './App.css';
 import {Monitor} from "./Monitor/Monitor.tsx";
-let deferredPrompt;
 
 if('serviceWorker' in navigator){
   navigator.serviceWorker
@@ -16,7 +15,6 @@ if('serviceWorker' in navigator){
 window.addEventListener('beforeinstallprompt', function (event) {
   console.log('beforeinstallprompt fired');
   event.preventDefault();
-  deferredPrompt = event;
   return false;
 });
 
