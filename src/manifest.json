@@ -1,0 +1,50 @@
+{
+  "name": "Parada Mia",
+  "short_name": "ParadaMia",
+  "icons": [
+    {
+      "src": "/src/assets/icons/48x48.svg",
+      "type": "image/png",
+      "size": "48x48"
+    },
+    {
+      "src": "/src/assets/icons/96x96.svg",
+      "type": "image/png",
+      "size": "96x96"
+    },
+    {
+      "src": "/src/assets/icons/144x144.svg",
+      "type": "image/png",
+      "size": "144x144"
+    },
+    {
+      "src": "/src/assets/icons/192x192.svg",
+      "type": "image/png",
+      "size": "192x192"
+    },
+    {
+      "src": "/src/assets/icons/256x256.svg",
+      "type": "image/png",
+      "size": "256x256"
+    },
+    {
+      "src": "/src/assets/icons/384x384.svg",
+      "type": "image/png",
+      "size": "384x384"
+    },
+    {
+      "src": "/src/assets/icons/512x512.svg",
+      "type": "image/png",
+      "size": "512x512"
+    }
+  ],
+  "start_url": "/index.html",
+  "scope": ".",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#fff",
+  "theme_color": "#3F51B5",
+  "description": "Upcoming departures of Tram D from Absberggasse",
+  "dir": "ltr",
+  "lang": "en-US"
+}
