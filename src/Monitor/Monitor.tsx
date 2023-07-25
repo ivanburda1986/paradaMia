@@ -8,6 +8,8 @@ export const Monitor: FC = () => {
     const [monitors, setMonitors] = useState(stopMonitors);
 
     const handleMonitorClick = () => {
+        console.log('Click');
+        console.log(stopMonitors);
         setMonitors(stopMonitors)
     };
 
